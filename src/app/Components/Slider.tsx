@@ -67,8 +67,8 @@ export default function InfiniteSlider({ images }: Readonly<InfiniteSliderProps>
                     <div className="min-w-full h-full flex align-middle items-center" key={index}>
                         <Image
                             src={image}
-                            width={50}
-                            height={50}
+                            width={200}
+                            height={200}
                             alt={`Slide ${index}`}
                             className="w-full h-full object-contain"
                         />
@@ -78,7 +78,7 @@ export default function InfiniteSlider({ images }: Readonly<InfiniteSliderProps>
             {/* Botão para voltar */}
             <button
                 onClick={handlePrev}
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                className="absolute -bottom-[1rem] left-4 transform -translate-y-1/2 text-white p-2 rounded-full"
             >
                 &#9664;
             </button>
@@ -86,7 +86,7 @@ export default function InfiniteSlider({ images }: Readonly<InfiniteSliderProps>
             {/* Botão para avançar */}
             <button
                 onClick={handleNext}
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                className="absolute -bottom-[1rem] right-4 transform -translate-y-1/2 text-white p-2 rounded-full"
             >
                 &#9654;
             </button>

@@ -1,13 +1,22 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import './waves.css'
 
 const MapaLocalizacaoSasso = dynamic(() => import("./MapaLocalizacaoSasso"), { ssr: false, });
 
 
 export default async function Footer()
 {
-    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full">
+    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full p-[5rem_2rem_2rem] overflow-hidden">
+
+        <div className="ocean translate-y-16 -translate-x-[50rem]">
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+
+        </div>
+
 
         <div id="logo" className="flex flex-col gap-2 items-center justify-center">
             <Image src='/images/logos/LogoSemFundo.svg' alt="Logo Sasso" width={200} height={200} className="w-40 h-40" />
@@ -15,9 +24,13 @@ export default async function Footer()
         </div>
 
         <nav id="midia" className="flex gap-10 items-center justify-center">
-            <a href="http://www.facebook.com/sassodanca/" target="_blank">
-                <Image src='/images/logos/facebook.svg' alt="Facebook Sasso Centro de Dança" width={200} height={200} className="w-5 h-5 hover:scale-150 transform-[scale] duration-500 " />
+
+            <a href="http://www.facebook.com/sassodanca/" target="_blank"
+                className="">
+                <Image src='/images/logos/facebook.svg' alt="Facebook Sasso Centro de Dança" width={200} height={200} className="w-5 h-5 hover:scale-150 transform-[scale] duration-500" />
             </a>
+
+
             <a href="https://www.instagram.com/sassodanca/" target="_blank">
                 <Image src='/images/logos/instagram.svg' alt="Instagram Sasso Centro de Dança" width={200} height={200} className="w-5 h-5 hover:scale-150 transform-[scale] duration-500" />
             </a>
@@ -69,6 +82,9 @@ export default async function Footer()
 
         </div>
 
+        <div className="text-sm font-thin justify-center">
+            © Copyright 2024 - Sasso Centro de Dança - Todos os direitos reservados.
+        </div>
 
     </footer >
 } 

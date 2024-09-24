@@ -7,9 +7,10 @@ import "leaflet/dist/leaflet.css";
 
 
 const customIcon = new L.Icon({
-    iconUrl: '/logos/LogoOnlyImage.png', // Caminho da sua imagem na pasta public
-    iconSize: [32, 32], // Tamanho do ícone
-    iconAnchor: [16, 32], // Ponto de ancoragem (centro da base do ícone)
+    iconUrl: '/images/logos/marcadorMapa.png', // Caminho da sua imagem na pasta public
+    className: 'rounded-xl',
+    iconSize: [18, 24], // Tamanho do ícone
+    iconAnchor: [10, 24], // Ponto de ancoragem (centro da base do ícone)
     popupAnchor: [0, -32], // Ponto de ancoragem do popup relativo ao ícone
 });
 
@@ -22,7 +23,7 @@ export default function MapaLocalizaçãoSasso()
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[-22.906516362979925, -43.111293683134946]} icon={customIcon}>
-            <Popup >
+            <Popup className="w-32 h-auto">
                 Sasso Centro de Dança
             </Popup>
         </Marker>

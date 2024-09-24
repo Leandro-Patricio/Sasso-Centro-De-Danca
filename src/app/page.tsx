@@ -1,16 +1,19 @@
+import Apresentacao from "./Components/Apresentacao";
 import Footer from "./Components/Footer";
-import MainNavbar from "./Components/Navbar"
-import VideosAndSliders from "./Components/VideosAndSliders";
-
+import MainNavbar from "./Components/MainNavbar/Navbar"
+import OnlyVideo from "./Components/OnlyVideo";
 
 
 export default async function LandingPage()
 {
-  return (<>
+  return (<main className="flex flex-col gap-5">
     <MainNavbar />
-    <VideosAndSliders />
-
+    <OnlyVideo />
+    <Apresentacao />
+    <section className="bg-imagemParalax parallax grayscale
+     bg-right-bottom  bg-no-repeat h-[30rem] w-full flex justify-center items-bottom">
+    </section>
     <Footer />
-  </>
+  </main>
   );
 }

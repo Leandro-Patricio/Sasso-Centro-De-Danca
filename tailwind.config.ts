@@ -8,7 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-
+      colors: {
+        orangeMain: '#D87B5C'
+      },
+      backgroundImage: {
+        imagemParalax: 'url("/images/landingPage/imagemParalax2.png")',
+      },
     },
   },
   plugins: [],
