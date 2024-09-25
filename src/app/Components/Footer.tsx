@@ -8,7 +8,7 @@ const MapaLocalizacaoSasso = dynamic(() => import("./MapaLocalizacaoSasso"), { s
 
 export default async function Footer()
 {
-    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full p-[5rem_2rem_2rem] overflow-hidden">
+    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full p-[5rem_2rem_2rem] overflow-hidden sm:overflow-visible">
 
         <div className="ocean translate-y-16 -translate-x-[50rem]">
             <div className="wave"></div>
@@ -23,7 +23,7 @@ export default async function Footer()
             <span className="text-3xl font-bold">Sasso Centro de Dança</span>
         </div>
 
-        <nav id="midia" className="flex gap-10 items-center justify-center">
+        <nav id="midia" className="flex flex-wrap gap-10 items-center justify-center">
 
             <a href="http://www.facebook.com/sassodanca/" target="_blank"
                 className="">
@@ -37,6 +37,12 @@ export default async function Footer()
             <a href="https://www.tiktok.com/@sassodanca" target="_blank">
                 <Image src='/images/logos/tikTok.svg' alt="Tik Tok Sasso Centro de Dança" width={200} height={200} className="w-5 h-5 hover:scale-150 transform-[scale] duration-500" />
             </a>
+            <a href="https://www.youtube.com/@sassodanca" target="_blank">
+                <Image src='/images/logos/youtube.svg' alt="Youtube Sasso Centro de Dança" width={200} height={200} className="w-6 h-6 hover:scale-150 transform-[scale] duration-500" />
+            </a>
+            <a href="https://open.spotify.com/user/31msqzbspvvdpuqt4igd2waom2bm?si=7a30f85a25ae4ea5&nd=1&dlsi=3d1eb32b3f094488" target="_blank">
+                <Image src='/images/logos/spotify.svg' alt="Spotify Sasso Centro de Dança" width={200} height={200} className="w-6 h-6 hover:scale-150 transform-[scale] duration-500" />
+            </a>
             <a href="https://wa.me/552127146848" target="_blank">
                 <Image src='/images/logos/whatsapp.svg' alt="Whats App Sasso Centro de Dança" width={200} height={200} className="w-5 h-5 hover:scale-150 transform-[scale] duration-500" />
             </a>
@@ -47,9 +53,9 @@ export default async function Footer()
 
 
 
-        <div className="flex gap-5 justify-around items-start align-middle w-full">
+        <div className="flex sm:flex-row flex-col gap-5 justify-around items-start align-middle w-full">
 
-            <nav id="header" className="flex flex-col gap-2">
+            <nav id="header" className="hidden sm:flex flex-col gap-2">
                 <ul id="">
                     <li>Matricule-se</li>
                 </ul>
@@ -72,8 +78,9 @@ export default async function Footer()
                         </a>
                     </li>
                 </ul>
-                <MapaLocalizacaoSasso />
-
+                <div className="hidden sm:flex">
+                    <MapaLocalizacaoSasso />
+                </div>
             </nav>
 
             <div id="parceiros"> parceiros</div>
@@ -81,7 +88,9 @@ export default async function Footer()
 
 
         </div>
-
+        <div className="w-full sm:hidden">
+            <MapaLocalizacaoSasso />
+        </div>
         <div className="text-sm font-thin justify-center">
             © Copyright 2024 - Sasso Centro de Dança - Todos os direitos reservados.
         </div>

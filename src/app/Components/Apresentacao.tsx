@@ -28,7 +28,7 @@ export default async function Apresentacao()
             <span className="text-justify indent-4">
                 Horários flexíveis preços que cabem no seu bolso! Venha experimentar:
             </span>
-            <ul className="grid grid-cols-2 gap-x-5">
+            {/*             <ul className="grid grid-cols-2 gap-x-5">
                 <li><a href="/jazz-iniciante">Jazz</a></li>
                 <li><a href="/corpo-ciente">Corpo-Ciente</a></li>
                 <li><a href="/hip-hop-joy-i">Hip Hop</a></li>
@@ -39,7 +39,7 @@ export default async function Apresentacao()
                 <li><a href="/k-pop">K-Pop</a></li>
                 <li><a href="/danca-mae-e-filha">Dança Mãe e Filha</a></li>
                 <li><a href="/passinho">Passinho</a></li>
-            </ul>
+            </ul> */}
 
         </div>
     </section>
