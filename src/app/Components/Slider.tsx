@@ -25,7 +25,7 @@ export default function InfiniteSlider({ images }: Readonly<InfiniteSliderProps>
 
     const stopInterval = () =>
     {
-        if (intervalRef.current !== null)
+        if (intervalRef.current !== null && typeof window !== 'undefined')
         { // Verificação para garantir que não é null
             window.clearInterval(intervalRef.current);
         }

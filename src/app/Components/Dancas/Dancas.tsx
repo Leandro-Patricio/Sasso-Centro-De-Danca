@@ -17,7 +17,7 @@ const dancas = [
 
 export default async function Dancas()
 {
-    return <section className="w-full flex flex-wrap gap-3 p-3 justify-center align-middle items-center">
+    return <section className="w-full flex flex-wrap gap-3 p-3 justify-center align-middle items-center bg-bgMain">
         {dancas.map((danca, index) =>
         {
             return <>
@@ -58,7 +58,7 @@ type DancasCardsProps = {
     href: string
 }
 
-export async function DancasCards({ imagem, name, descricao, href }: DancasCardsProps)
+export async function DancasCards({ imagem, name, descricao, href }: Readonly<DancasCardsProps>)
 {
     return <div className="relative flex flex-col justify-end items-center align-middle w-72 h-72 overflow-hidden group">
         <Image
@@ -66,7 +66,7 @@ export async function DancasCards({ imagem, name, descricao, href }: DancasCards
             alt={imagem}
             width={300}
             height={400}
-            className="absolute top-0 left-0 w-full h-full -z-10 transition-transform duration-500 group-hover:scale-110"
+            className="absolute top-0 left-0 w-full h-full  transition-transform duration-500 group-hover:scale-110"
         />
         <Link href={href} id="textoDescricao"
             className="w-full absolute top-0 text-base font-semibold bg-[#1F1F1F] bg-opacity-90 

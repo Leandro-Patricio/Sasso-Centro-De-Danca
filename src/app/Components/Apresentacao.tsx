@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default async function Apresentacao()
 {
-    return <section className="w-full flex sm:flex-row flex-col  px-2 gap-5 bg-#0a0a0a/95">
+    return <section className="w-full flex sm:flex-row flex-col  px-2 gap-5 z-10">
 
         <Image src='/images/professores/equipeSouSasso.png' width={500} height={500} alt="Equipe Sasso"
-            className="w-full sm:w-1/2 rounded-full" />
+            className="w-full sm:w-1/2 rounded-full " />
 
         <div className="flex flex-col w-full sm:w-1/2  justify-around items-center text-start">
             <h1 className="text-xl font-bold">

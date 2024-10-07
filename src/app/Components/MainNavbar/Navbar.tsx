@@ -7,7 +7,12 @@ import Link from "next/link";
 
 export default async function MainNavbar()
 {
-    return <header className=" flex justify-evenly align-middle items-center p-5 shadow-lg shadow-black">
+    return <header
+        className="fixed w-full z-20 top-0 flex justify-evenly align-middle items-center p-5 
+     bg-black  shadow-md shadow-purpleMain/20 h-24
+     "
+    >
+
 
 
         <Link href={'/'} className="flex justify-start">

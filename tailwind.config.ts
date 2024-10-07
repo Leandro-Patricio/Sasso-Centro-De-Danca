@@ -12,6 +12,7 @@ const config: Config = {
         bgMain: '#0a0a0a',
         purpleMain: '#7800FF',
         yellowMain: '#FBEE09',
+        redMain: '#F61B51',
         orangeMain: '#D87B5C'
       },
       backgroundImage: {

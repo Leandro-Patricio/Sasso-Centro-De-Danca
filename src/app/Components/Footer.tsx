@@ -2,13 +2,15 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import './waves.css'
+import RedesSociais from "./RedesSociais";
 
 const MapaLocalizacaoSasso = dynamic(() => import("./MapaLocalizacaoSasso"), { ssr: false, });
 
 
 export default async function Footer()
 {
-    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full p-[5rem_2rem_2rem] overflow-hidden sm:overflow-visible">
+    return <footer className="flex flex-col pt-36 gap-10 justify-center items-center align-middle w-full
+     p-[5rem_2rem_2rem] overflow-x-hidden z-10">
 
         <div className="ocean translate-y-16 -translate-x-[50rem]">
             <div className="wave"></div>
@@ -23,6 +25,8 @@ export default async function Footer()
             <span className="text-3xl font-bold">Sasso Centro de Dança</span>
         </div>
 
+        <RedesSociais />
+        {/* 
         <nav id="midia" className="flex flex-wrap gap-10 items-center justify-center">
 
             <a href="http://www.facebook.com/sassodanca/" target="_blank"
@@ -50,7 +54,7 @@ export default async function Footer()
                 <Image src='/images/logos/email.svg' alt="E-mail Sasso Centro de Dança" width={200} height={200} className="w-6 h-6 hover:scale-150 transform-[scale] duration-500" />
             </a>
         </nav>
-
+ */}
 
 
         <div className="flex sm:flex-row flex-col gap-5 justify-around items-start align-middle w-full">
