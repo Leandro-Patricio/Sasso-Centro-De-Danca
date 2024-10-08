@@ -17,9 +17,14 @@ export default async function MainNavbar()
 
         <Link href={'/'} className="flex justify-start">
             <Image src='/images/logos/LogoSemFundo.svg' width={40} height={40} alt="Sasso Logo" />
-            <span className="flex flex-col align-middle justify-start">
-                <span>Sasso</span>
-                <span>Centro de dança</span>
+            <span className="flex gap-1 align-middle justify-start items-center">
+                <span className="text-5xl font-bold">SASSO</span>
+                <div className="flex flex-col justify-start align-middle text-sm font-extralight leading-3">
+                    <span>Centro</span>
+                    <span>de</span>
+                    <span>dança</span>
+
+                </div>
             </span>
         </Link>
 

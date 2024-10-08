@@ -1,7 +1,7 @@
 import Apresentacao from "./Components/Apresentacao";
 import Dancas from "./Components/Dancas/Dancas";
 import Footer from "./Components/Footer";
-import MainNavbar from "./Components/MainNavbar/Navbar"
+
 import OnlyVideo from "./Components/OnlyVideo";
 import SaibaMaisNasRedesSociais from "./Components/SaibaMaisNasRedesSociais";
 
@@ -10,7 +10,7 @@ import SaibaMaisNasRedesSociais from "./Components/SaibaMaisNasRedesSociais";
 export default async function LandingPage()
 {
   return (<main className="flex flex-col gap-5 relative ">
-    <MainNavbar />
+
     <OnlyVideo />
 
     <Apresentacao />

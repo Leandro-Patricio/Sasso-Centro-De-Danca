@@ -51,7 +51,7 @@ export default function OnlyVideo()
             if (videoContainer && typeof window !== 'undefined')
             {
                 const startFade = 0; // Começa a desaparecer assim que começa a sair da tela
-                const endFade = window.innerHeight; // Ponto em que o vídeo desaparece completamente
+                const endFade = window.innerHeight - 300; // Ponto em que o vídeo desaparece completamente
 
                 const scrollTop = window.scrollY;// A posição atual de rolagem
 

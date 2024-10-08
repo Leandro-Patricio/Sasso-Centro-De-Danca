@@ -18,7 +18,7 @@ export default function SaibaMaisNasRedesSociais()
                 const yOffset = (Math.random() - 0.5) * 100; // Ajuste a amplitude
 
                 // Atualiza a posição do círculo com transição
-                circle.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                (circle as HTMLElement).style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
 
             // Chama a função de movimento novamente após um intervalo
