@@ -10,7 +10,7 @@ export default function BotaoNossaHistoria()
     const params = useMemo(() => new URLSearchParams(searchParams), [searchParams]);
     const nossaHistoriaParams = params.get('nossaHistoria')
 
-    const nossaHistoriaAberta = nossaHistoriaParams ? true : false
+    const nossaHistoriaAberta = nossaHistoriaParams ?? false
 
     const handleOpen = () =>
     {

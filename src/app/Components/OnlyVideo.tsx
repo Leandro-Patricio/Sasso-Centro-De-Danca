@@ -15,12 +15,12 @@ export default function OnlyVideo()
             const windowHeight = window && window.innerHeight;
             //  const videoTelaPequena = document.getElementById('videoTicTelaGrande')?.classList.contains('hidden') // Verifica se o video da tela pequena está oculto
 
-            if (windowWidth < windowHeight)
+            if (windowWidth < 768)
             {
                 // Se a tela for mais alta do que larga, o vídeo ocupa a altura total
                 //    const videoAspectRatio = 369 / 656; // Proporção do vídeo
                 return windowHeight;
-            } else if (windowWidth >= windowHeight)
+            } else if (windowWidth >= 768)
             {
                 // const widthVideo = document.getElementById('videoTicTelaGrande')?.offsetWidth  // Verifica se o video da tela pequena está oculto
                 const heightVideo = document.getElementById('videoTicTelaGrande')?.offsetHeight
@@ -73,7 +73,6 @@ export default function OnlyVideo()
         };
     }, []);
 
-    console.log(videoHeight())
     return (
         <section className={`flex flex-col justify-center w-full ${typeof window !== 'undefined' ? onlyVideoHeight : 'h-screen'} `}
             style={{ height: onlyVideoHeight ? `${onlyVideoHeight}px` : '100vh' }}>
@@ -91,7 +90,7 @@ export default function OnlyVideo()
                     preload="auto"
                     playsInline
                     loop
-                    className={`w-full ${darkness === 0 && 'hidden'} md:hidden`}
+                    className={`w-full ${darkness === 0 && 'hidden'} md:hidden `}
                     style={{ filter: `brightness(${darkness})` }}
                 >
                     Este título não pode ser reproduzido no momento.
