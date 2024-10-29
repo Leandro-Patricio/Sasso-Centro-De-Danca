@@ -9,37 +9,39 @@ export default function SaibaMaisNasRedesSociais()
     {
         const circles = document.querySelectorAll('.circle');
 
+        // Função que gera um deslocamento aleatório para cada círculo
         const moveCircles = () =>
         {
             circles.forEach(circle =>
             {
-                // Gera um deslocamento aleatório
                 const xOffset = (Math.random() - 0.5) * 100; // Ajuste a amplitude
                 const yOffset = (Math.random() - 0.5) * 100; // Ajuste a amplitude
 
-                // Atualiza a posição do círculo com transição
                 (circle as HTMLElement).style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
 
-            // Chama a função de movimento novamente após um intervalo
-            setTimeout(moveCircles, 3000); // Ajuste o tempo para a próxima animação
+            // Anima novamente após o término da transição
+            setTimeout(() =>
+            {
+                requestAnimationFrame(moveCircles);
+            }, 3000); // Pausa de 3 segundos antes da próxima animação
         };
+
+        // Adiciona uma transição suave para cada círculo
+        circles.forEach(circle =>
+        {
+            (circle as HTMLElement).style.transition = "transform 2.9s ease-in-out";
+        });
 
         // Inicia a animação
         moveCircles();
-
-        // Limpeza: Se necessário, você pode remover o listener aqui
-        return () =>
-        {
-            // Se você estiver usando eventos, remova-os aqui
-        };
     }, []);
 
-    return <section className="relative bg-bgMain overflow-hidden h-screen w-screen">
+    return <section className="relative bg-bgMain overflow-hidden w-screen">
         <Image src='./images/circulos/CirculoRoxo.svg' alt="Circulo Roxo" width={300} height={300}
-            className="circle   absolute top-0 -left-[5rem] transition-transform duration-[3000ms] linear " />
+            className="circle   absolute top-0 -left-[5rem]  " />
         <Image src='./images/circulos/CirculoVermelho.svg' alt="Circulo Vermelho" width={300} height={300}
-            className=" circle  absolute bottom-0 -right-[5rem] transition-transform duration-[3000ms] linear " />
+            className=" circle  absolute bottom-0 -right-[5rem]  " />
 
         <div className="z-10 flex flex-col text-center justify-center items-center 
     relative  gap-10  px-2">

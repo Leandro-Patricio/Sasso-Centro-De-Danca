@@ -79,12 +79,12 @@ export default function OnlyVideo()
 
             {/* h-[calc(100vh-48px)] videoHeight */}
             {/* Video Section */}
-            <div id="video-container" className="w-full flex flex-col fixed top-0">
+            <div id="video-container" className="w-full flex flex-col fixed -top-5">
                 <div className="h-24 bg-black"></div>
                 <video
                     id="videoRuaTelaPequena"
                     src="/videos/rua.mp4"
-                    controls
+                    // controls
                     autoPlay
                     muted
                     preload="auto"
@@ -98,7 +98,7 @@ export default function OnlyVideo()
                 <video
                     id="videoTicTelaGrande"
                     src="/videos/ticTeaser.mp4"
-                    controls
+                    // controls
                     autoPlay
                     muted
                     preload="auto"

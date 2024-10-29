@@ -9,7 +9,7 @@ import SaibaMaisNasRedesSociais from "./Components/SaibaMaisNasRedesSociais";
 
 export default async function LandingPage()
 {
-  return (<main className="flex flex-col gap-5 relative ">
+  return (<main className="flex flex-col gap-5 relative w-full">
 
     <OnlyVideo />
 

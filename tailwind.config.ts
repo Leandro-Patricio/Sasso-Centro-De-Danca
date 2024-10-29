@@ -13,11 +13,15 @@ const config: Config = {
         purpleMain: '#7800FF',
         yellowMain: '#FBEE09',
         redMain: '#F61B51',
-        orangeMain: '#D87B5C'
+        orangeMain: '#D87B5C',
+        pinkMain: '#F86288'
       },
       backgroundImage: {
         imagemParalax: 'url("/images/landingPage/imagemParalax2.png")',
       },
+      screens: {
+        xs: '450px'
+      }
     },
   },
   plugins: [],

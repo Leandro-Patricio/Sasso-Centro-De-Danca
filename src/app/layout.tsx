@@ -19,19 +19,17 @@ export const metadata: Metadata = {
   description: "Sasso Centro de dança",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>)
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>)
 {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable}
-         w-screen min-w-[350px] antialiased overflow-x-hidden bg-bgMain`}
+       w-lvw min-w-[350px] h-full overflow-x-hidden antialiased   bg-bgMain relative`}
       >
-        <MainNavbar />
+        <MainNavbar
+          key={'topMainNavbar'}
+        />
         {children}
       </body>
     </html>

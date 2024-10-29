@@ -6,7 +6,7 @@ type SmallNavProps = {
     children: ReactNode
 }
 
-export function SmallNav({ children }: SmallNavProps)
+export function SmallNav({ children }: Readonly<SmallNavProps>)
 {
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
@@ -31,6 +31,7 @@ export function SmallNav({ children }: SmallNavProps)
     return (
         <nav className={` fixed top-0 right-0 flex sm:hidden flex-col z-20 `} ref={navRef}>
             <div
+                role="presentation"
                 onClick={() => setIsOpen(!isOpen)}
                 className={`z-10 top-5 right-9 absolute`}
             >

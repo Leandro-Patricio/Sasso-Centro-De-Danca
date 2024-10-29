@@ -1,17 +1,35 @@
 import { Suspense } from "react";
 import BotaoNossaHistoria from "./botaoNossaHistoria";
-import ComplementoNossaHistoria from "./complementoNossaHistoria";
 import Image from "next/image";
+import TextoGrifado from "./TextoGrifado";
+import ComplementoNossaHistoria from "./complementoNossaHistoria";
 
 export default async function SecaoNossaHistoria(/* { children }: Readonly<{ children: React.ReactNode }> */)
 {
-    return <section className="flex sm:flex-row flex-col px-10 gap-10 z-10 relative bg-transparent "> {/* Entrada */}
-        <div className="flex flex-col w-full sm:w-4/6 gap-3 justify-evenly ">
-            <span className="text-3xl font-bold text-center">Nossa história</span>
-            <span className="text- font-normal">Na Sasso - Centro de Dança, acreditamos que a arte da dança tem o poder de transformar vidas e inspirar mudanças.
-                Com uma trajetória de mais de 5 anos, o centro foi fundado pelas talentosas Cris e Maria Sasso, que têm se dedicado a
-                promover a cultura da dança em Niterói e além. Por meio de espetáculos inovadores, formações artísticas e um compromisso com a inclusão social, a Sasso -
-                Centro de Dança vem moldando gerações de bailarinos, sempre com o propósito de unir a arte à conscientização social e ambiental.</span>
+    return <section className="flex sm:flex-row flex-col px-10 gap-10 z-10 relative bg-transparent"> {/* Entrada */}
+        <div className="flex flex-col w-full h-full sm:w-4/6 gap-3 justify-evenlytext-white font-normal ">
+            <span className="text-3xl font-bold text-center ">Nossa história</span>
+            <span className="indent-4">
+                Na Sasso - Centro de Dança,
+                acreditamos que a arte da dança tem o poder de transformar vidas e inspirar mudanças.
+
+                Com uma trajetória de mais de 5 anos, o centro foi fundado pelas talentosas
+                Cris e Maria Sasso, que têm se dedicado a
+
+                <TextoGrifado
+                    texto={"promover a cultura da dança em Niterói e além."} />
+
+                Por meio de espetáculos inovadores,
+                formações artísticas e um compromisso com a inclusão social, a Sasso -
+                Centro de Dança vem moldando gerações de bailarinos,
+                sempre com o
+
+                <TextoGrifado
+                    texto={"propósito de unir a arte à conscientização social e ambiental."} />
+
+            </span>
+
+
             <div className="hidden sm:block">
                 <Suspense fallback={<div>Loading...</div>}>
                     <ComplementoNossaHistoria />
@@ -20,9 +38,9 @@ export default async function SecaoNossaHistoria(/* { children }: Readonly<{ chi
         </div>
 
         {/* logo com botão */}
-        <div className="w-full sm:w-2/6">
+        <div className="w-full h-full sm:w-2/6">
 
-            <div className="sm:sticky sm:top-32 flex flex-col flex-1 items-center ">
+            <div className="sm:sticky sm:top-0 flex flex-col items-center ">
                 <Image src='/images/logos/LogoSemFundo.svg'
                     width={150} height={150} alt="Sasso Logo"
                     className="w-[10rem] sm:w-auto h-auto" />
