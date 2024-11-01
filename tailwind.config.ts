@@ -21,6 +21,19 @@ const config: Config = {
       },
       screens: {
         xs: '450px'
+      },
+      animation: {
+        'sideShow': 'sideShow .5s linear',
+        'sideHide': 'sideHide .5s linear'  // animação de saída,
+      },
+      keyframes: {
+        sideShow: {
+          '0%': { transform: 'translateX(-1rem)', opacity: '0' },
+          '100%': { transform: 'translateX(0rem)', opacity: '1', },
+        }, sideHide: {
+          '0%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(1rem)', opacity: '0', display: 'none' },
+        }
       }
     },
   },

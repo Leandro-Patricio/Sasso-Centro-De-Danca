@@ -39,8 +39,8 @@ export function SmallNav({ children }: Readonly<SmallNavProps>)
             </div>
 
             <div
-                className={` ${isOpen ? "bg-orangeMain bg-opacity-[98%] -translate-x-32" : "translate-x-20"}
-           absolute h-screen w-32 px-5 pt-5 shadow-md shadow-orangeMain/50  transition-all duration-500
+                className={` ${isOpen ? "bg-redMain bg-opacity-[98%] -translate-x-32" : "translate-x-20"}
+           absolute h-screen w-32 px-5 pt-5 shadow-md shadow-redMain/50  transition-all duration-500
            `}
             >
                 <span className={`h-full w-full`}>

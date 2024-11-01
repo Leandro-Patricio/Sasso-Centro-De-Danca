@@ -2,9 +2,9 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import './waves.css'
-import RedesSociais from "./RedesSociais";
+import RedesSociais from "./home/RedesSociais";
 
-const MapaLocalizacaoSasso = dynamic(() => import("./MapaLocalizacaoSasso"), { ssr: false, });
+const MapaLocalizacaoSasso = dynamic(() => import("./home/MapaLocalizacaoSasso"), { ssr: false, });
 
 
 export default async function Footer()

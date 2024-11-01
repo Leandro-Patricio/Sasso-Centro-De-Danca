@@ -21,8 +21,8 @@ export default function ComplementoNossaHistoria()
     flex flex-col justify-evenly items-start
     bg-purpleMain/20
     rounded-lg overflow-hidden
-    transition-all duration-1000  flex flex-col 
-     gap-4 items-end justify-start text-start child:indent-4`}>
+    transition-all duration-1000   
+     gap-4  text-start child:indent-4`}>
 
         <div className="text-2xl font-bold text-center w-full">A história da Sasso - Centro de Dança</div>
         <span>

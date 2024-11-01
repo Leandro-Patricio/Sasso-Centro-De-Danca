@@ -25,12 +25,13 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable}
-       w-lvw min-w-[350px] h-full overflow-x-hidden antialiased   bg-bgMain relative`}
+       w-100lvw min-w-[350px] h-full overflow-x-hidden antialiased   bg-bgMain relative`}
       >
         <MainNavbar
           key={'topMainNavbar'}
         />
         {children}
+
       </body>
     </html>
   );

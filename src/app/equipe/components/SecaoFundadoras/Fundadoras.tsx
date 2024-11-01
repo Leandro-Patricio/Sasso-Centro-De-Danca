@@ -28,7 +28,7 @@ export default function Fundadoras()
 
 
 
-    return <div className="w-full h-full 
+    return <div className="w-full h-full  
     flex flex-1 justify-center align-middle items-center "
         ref={containerRef}
     >

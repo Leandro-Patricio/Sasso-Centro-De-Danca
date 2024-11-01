@@ -5,7 +5,7 @@ const fundadorasInfo = {
     Cris: {
         nome: "Cristiana Patrício Sasso",
         imgAlt: 'Foto da fundadora Cris Sasso',
-        imagem: "/images/professores/Cris Sasso.png",
+        imagem: "/images/equipe/Cris Sasso.png",
         paragrafo1: `Cristiana Sasso descobriu sua paixão pela dança na infância, 
         sendo inspirada por artistas e professores ao seu redor. Desde então,
         ela dedicou sua vida a essa arte, tornando-se uma dançarina excepcional
@@ -24,7 +24,7 @@ const fundadorasInfo = {
     Maria: {
         nome: "Maria Sasso",
         imgAlt: 'Foto da fundadora Cris Sasso',
-        imagem: "/images/professores/Maria Sasso.png",
+        imagem: "/images/equipe/Maria Sasso.png",
         paragrafo1: ` Maria Sasso cresceu envolvida na arte da dança,
         guiada desde cedo pela paixão e talento de sua mãe, Cris.
         Desde seus primeiros passos, ela demonstrou dedicação e uma
@@ -55,22 +55,24 @@ export default function FundadoraIndividual({ crisOuMaria, fundadoraDaVez, setFu
 
     const handleClickNaFundadora = () =>
     {
+        //   document.getElementById("fundadoraDaVez")?.classList.add('animate-sideHide')
         if (fundadoraDaVez === nomeDaOutraFundadora)
         {
             setFundadoraDaVez("")
+
         } else if (fundadoraDaVez !== nomeDaOutraFundadora)
         {
             setFundadoraDaVez(nomeDaOutraFundadora)
         }
+
     }
 
-    return <div className='relative focus:border-[1px] border-mainYellow
-   '>
+    return <div className='relative '>
 
-        <button onClick={handleClickNaFundadora}        >
+        <button onClick={handleClickNaFundadora}>
             <Image src={fundadora.imagem} width={500} height={500}
                 alt={fundadora.imgAlt}
-                className=" aspect-[354.854/483]"
+                className=" aspect-[354.854/483] w-auto max-h-[30rem]"
             />
         </button>
 
@@ -81,8 +83,11 @@ export default function FundadoraIndividual({ crisOuMaria, fundadoraDaVez, setFu
                             bg-black/90
                             flex flex-1 flex-col justify-start align-middle items-start gap-2
                             overflow-y-auto overflow-x-hidden
-                             
-            ">
+                            transition-all duration-300
+                            animate-sideShow
+            "
+                id="fundadoraDaVez"
+            >
 
 
                 <div className="sticky -top-0 p-2 

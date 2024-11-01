@@ -6,8 +6,9 @@ import ComplementoNossaHistoria from "./complementoNossaHistoria";
 
 export default async function SecaoNossaHistoria(/* { children }: Readonly<{ children: React.ReactNode }> */)
 {
-    return <section className="flex sm:flex-row flex-col px-10 gap-10 z-10 relative bg-transparent"> {/* Entrada */}
-        <div className="flex flex-col w-full h-full sm:w-4/6 gap-3 justify-evenlytext-white font-normal ">
+    return <section className="flex sm:flex-row flex-col 
+    min-h-full  px-10 gap-10 z-10 relative bg-transparent"> {/* Entrada */}
+        <div className="flex flex-col w-full h-full sm:w-4/6 gap-3 justify-evenly text-white font-normal ">
             <span className="text-3xl font-bold text-center ">Nossa história</span>
             <span className="indent-4">
                 Na Sasso - Centro de Dança,
@@ -35,12 +36,14 @@ export default async function SecaoNossaHistoria(/* { children }: Readonly<{ chi
                     <ComplementoNossaHistoria />
                 </Suspense>
             </div>
+
+
         </div>
 
         {/* logo com botão */}
-        <div className="w-full h-full sm:w-2/6">
+        <div className="w-full  max-h-full sm:w-2/6">
 
-            <div className="sm:sticky sm:top-0 flex flex-col items-center ">
+            <div className="sm:sticky sm:top-32 flex flex-col flex-grow items-center ">
                 <Image src='/images/logos/LogoSemFundo.svg'
                     width={150} height={150} alt="Sasso Logo"
                     className="w-[10rem] sm:w-auto h-auto" />

@@ -1,14 +1,15 @@
 import Image from "next/image";
-import SecaoInicialProfessores from "./components/SecaoInicialProfessores";
 import SecaoNossaHistoria from "./components/SecaoNossaHistoria/SecaoNossaHistoria";
 import SecaoFundadoras from "./components/SecaoFundadoras/SecaoFundadoras";
+import SecaoInicialEquipe from "./components/SecaoInicialEquipe";
+import SecaoDemaisProfissionais from "./components/SecaoDemaisEquipe/SecaoDemaisEquipe";
 
 
-export default async function Professores(/* { children }: Readonly<{ children: React.ReactNode }> */)
+export default async function Equipe(/* { children }: Readonly<{ children: React.ReactNode }> */)
 {
-    return <main className="w-full h-full pt-32 relative overflow-x-hidden  z-10">
-
-        <SecaoInicialProfessores />
+    return <main className="w-full h-full pt-32 relative   z-10">
+        {/* overflow-x-hidden */}
+        <SecaoInicialEquipe />
 
 
         {/* wave divisória */}
@@ -25,6 +26,8 @@ export default async function Professores(/* { children }: Readonly<{ children: 
 
         <SecaoFundadoras />
 
+
+        <SecaoDemaisProfissionais />
 
     </main>
 }

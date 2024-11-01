@@ -2,8 +2,8 @@ import Apresentacao from "./Components/Apresentacao";
 import Dancas from "./Components/Dancas/Dancas";
 import Footer from "./Components/Footer";
 
-import OnlyVideo from "./Components/OnlyVideo";
-import SaibaMaisNasRedesSociais from "./Components/SaibaMaisNasRedesSociais";
+import OnlyVideo from "./Components/home/OnlyVideo";
+import SaibaMaisNasRedesSociais from "./Components/home/SaibaMaisNasRedesSociais";
 
 
 
