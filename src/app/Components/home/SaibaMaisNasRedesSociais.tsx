@@ -47,7 +47,7 @@ export default function SaibaMaisNasRedesSociais()
     relative  gap-10  px-2">
 
 
-            <h2 className="text-3xl font-bold">Quer saber <br />quando e onde <br />será a nossa próxima <br />apresentação?</h2>
+            <h2 className="h1-title">Quer saber <br />quando e onde <br />será a nossa próxima <br />apresentação?</h2>
             <div className="text-xl font-semibold">Fique ligada nas nossas redes sociais!</div>
             <RedesSociais />
             <div className="text-xl font-semibold">Receba as nossas novidades! Adicine seu e-mail abaixo

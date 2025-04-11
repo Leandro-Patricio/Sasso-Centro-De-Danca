@@ -34,8 +34,16 @@ const config: Config = {
           '0%': { transform: 'translateX(0)', opacity: '1' },
           '100%': { transform: 'translateX(1rem)', opacity: '0', display: 'none' },
         }
-      }
+      },
+      fontFamily: {
+        title: ['Nexa-XBold', 'sans-serif'],
+        text: "var(--font-text)",
+        detail: "var(--font-detail)",
+        //text: ['NexaRegular', 'sans-serif'],
+        // detail: ['NexaThin', 'sans-serif'],
+      },
     },
+
   },
   plugins: [],
 };

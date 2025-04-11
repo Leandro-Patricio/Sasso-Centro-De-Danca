@@ -94,7 +94,7 @@ export default function FundadoraIndividual({ crisOuMaria, fundadoraDaVez, setFu
                 w-full flex align-middle justify-between items-center
                         text-xl font-bold text-center bg-black bg-opacity-95
                          shadow-sm shadow-purpleMain/20">
-                    <span className="text-purpleMain">
+                    <span className="text-yellowMain">
 
                         {outraFundaroda.nome}
                     </span>

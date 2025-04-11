@@ -1,3 +1,4 @@
+
 import Apresentacao from "./Components/Apresentacao";
 import Dancas from "./Components/Dancas/Dancas";
 import Footer from "./Components/Footer";
@@ -21,5 +22,6 @@ export default async function LandingPage()
     </section>
     <Footer />
   </main>
+
   );
 }

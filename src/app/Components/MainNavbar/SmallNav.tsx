@@ -33,7 +33,7 @@ export function SmallNav({ children }: Readonly<SmallNavProps>)
             <div
                 role="presentation"
                 onClick={() => setIsOpen(!isOpen)}
-                className={`z-10 top-5 right-9 absolute`}
+                className={`z-10 top-5 right-4 absolute`}
             >
                 <Hamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>

@@ -7,10 +7,10 @@ export default async function Apresentacao()
         <Image src='/images/equipe/equipeSouSasso.png' width={500} height={500} alt="Equipe Sasso"
             className="w-full sm:w-1/2 rounded-full " />
 
-        <div className="flex flex-col w-full sm:w-1/2  justify-around items-center text-start">
-            <h1 className="text-xl font-bold">
+        <div className="flex flex-col w-full sm:w-1/2  justify-around items-center text-start ">
+            <h1 className="text-xl font-bold text-center font-title">
                 Bem-vinda à <br />
-                <span className="text-3xl font-bold">                    Sasso!                </span>
+                <span className="h1-title">                    Sasso!                </span>
             </h1>
 
             <span className="text-justify indent-4">

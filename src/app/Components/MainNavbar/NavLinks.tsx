@@ -1,14 +1,15 @@
 import Link from "next/link"
 
 
-type navLinksProps = { goTo: 'matriculese' | 'equipe' | 'home' /*| 'contato' | 'login'  */ }
+type navLinksProps = { goTo: 'matriculese' | 'equipe' | 'dancas' /*| 'home' | 'contato' | 'login'  */ }
 
-export const linksNames: Array<'matriculese' | 'equipe' | 'home' /*| 'contato' | 'login' */> = ['home', 'matriculese', 'equipe', /* 'contato', "login" */]
+export const linksNames: Array<'matriculese' | 'equipe' | 'dancas'/* | 'home' | 'contato' | 'login' */> = [/* 'home', */ 'matriculese', 'equipe', 'dancas' /* 'contato', "login" */]
 
 const links = {
-    home: { href: './', name: 'Início' },
+    /* home: { href: './', name: 'Início' }, */
     matriculese: { href: "https://docs.google.com/forms/d/e/1FAIpQLSd8qxb41JXl8is6QnCpltWEcwyGMCo5e4pAlhnnGH_1IC1jtA/viewform?usp=sf_link", name: 'Matricule-se' },
     equipe: { href: './equipe', name: 'Equipe' },
+    dancas: { href: './dancas', name: 'Danças' },
     /*   contato: { href: './contato', name: 'Contato' },
        login: { href: './login', name: 'Login' } */
 }

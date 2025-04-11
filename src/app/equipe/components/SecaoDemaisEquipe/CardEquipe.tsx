@@ -12,7 +12,8 @@ type EquipeCardsProps = {
 
 export default function CardEquipe({ imagem, name, href }: Readonly<EquipeCardsProps>)
 {
-    return <div className="relative flex flex-col justify-end items-center align-middle 
+    return <Link href={href}
+        className="relative flex flex-col justify-end items-center align-middle 
     w-40 h-40 sm:w-60 sm:h-60 overflow-hidden group">
 
         <Image
@@ -36,11 +37,11 @@ export default function CardEquipe({ imagem, name, href }: Readonly<EquipeCardsP
         border-b-[1px] border-redMain shadow-sm shadow-redMain
         ">
 
-            <span className=" ">
+            <span className="">
                 {primeiroEUltimoNome(name)}
             </span>
         </div>
-    </div>
+    </Link>
 }
 
 
