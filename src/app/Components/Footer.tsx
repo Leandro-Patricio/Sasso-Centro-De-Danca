@@ -1,16 +1,15 @@
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import './waves.css'
-import RedesSociais from "./home/RedesSociais";
+import RedesSociais from "./home/SaibaMaisNasRedesSociais/RedesSociais";
+import MapaLocalizaçãoSasso from "./home/MapaSasso/MapaLocalizaçãoSasso";
 
-const MapaLocalizacaoSasso = dynamic(() => import("./home/MapaLocalizacaoSasso"), { ssr: false, });
 
 
 export default async function Footer()
 {
-    return <footer className="flex flex-col pt-36 gap-10 justify-center items-center align-middle w-full
-     p-[5rem_2rem_2rem] overflow-x-hidden z-10">
+    return <footer className="flex flex-col gap-10 justify-center items-center align-middle w-full
+     p-[12rem_2rem_2rem] overflow-x-hidden z-10">
 
         <div className="ocean translate-y-16 -translate-x-[50rem]">
             <div className="wave"></div>
@@ -83,7 +82,7 @@ export default async function Footer()
                     </li>
                 </ul>
                 <div className="hidden sm:flex">
-                    <MapaLocalizacaoSasso />
+                    <MapaLocalizaçãoSasso />
                 </div>
             </nav>
 
@@ -93,7 +92,7 @@ export default async function Footer()
 
         </div>
         <div className="w-full sm:hidden">
-            <MapaLocalizacaoSasso />
+            <MapaLocalizaçãoSasso />
         </div>
         <div className="text-sm font-thin justify-center">
             © Copyright 2024 - Sasso Centro de Dança - Todos os direitos reservados.

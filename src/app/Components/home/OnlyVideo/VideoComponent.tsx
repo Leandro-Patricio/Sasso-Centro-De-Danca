@@ -2,7 +2,7 @@
 
 import { useState, useLayoutEffect, useEffect } from "react";
 
-export default function OnlyVideo()
+export default function VideoComponent()
 {
 
     const [darkness, setDarkness] = useState(1); // Inicialmente o brilho está normal (1)
@@ -72,15 +72,17 @@ export default function OnlyVideo()
             typeof window !== 'undefined' && window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    console.log(darkness);
     return (
-        <section className={`flex flex-col justify-center w-full ${typeof window !== 'undefined' ? onlyVideoHeight : 'h-screen'} `}
+        <section className={`flex flex-col justify-center w-full ${typeof window !== 'undefined' ? onlyVideoHeight : 'h-screen'}
+      
+        `}
             style={{ height: onlyVideoHeight ? `${onlyVideoHeight}px` : '100vh' }}>
 
             {/* h-[calc(100vh-48px)] videoHeight */}
             {/* Video Section */}
-            <div id="video-container" className="w-full flex flex-col fixed -top-5">
-                <div className="h-24 bg-black"></div>
+            <div id="video-container" className={`w-full flex flex-col fixed -top-5   ${darkness === 0 && 'hidden'}`}>
+                <div className={`h-24 bg-black`}></div>
                 <video
                     id="videoRuaTelaPequena"
                     src="/videos/rua.mp4"
@@ -104,8 +106,9 @@ export default function OnlyVideo()
                     preload="auto"
                     playsInline
                     loop
-                    className={`w-full lg:w-auto lg:max-h-[calc(100vh-48px)] ${darkness === 0 && 'hidden'} 
-                    hidden md:flex justify-start align-top`}
+                    className={`w-full lg:w-auto lg:max-h-[calc(100vh-48px)] 
+                    hidden md:flex ${darkness === 0 && 'hidden'} 
+                    justify-start align-top`}
                     style={{ filter: `brightness(${darkness})` }}
                 >
                     Este vídeo não pode ser reproduzido no momento.

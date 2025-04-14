@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MainNavbar from "./Components/MainNavbar/Navbar";
 import { Montserrat as montserrat, Poppins } from "next/font/google";
+import Footer from "./Components/Footer";
 
 
 /* const geistSans = localFont({
@@ -49,6 +50,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         />
 
         {children}
+
+        <Footer />
 
       </body>
     </html>

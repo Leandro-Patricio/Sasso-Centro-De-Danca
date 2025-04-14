@@ -9,8 +9,6 @@ type TextoGrifadoProps = {
 export default function TextoGrifado({ texto }: Readonly<TextoGrifadoProps>)
 {
 
-
-
     const textRef = useRef<HTMLSpanElement | null>(null);
 
     useEffect(() =>

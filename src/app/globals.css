@@ -59,7 +59,7 @@
 
 @layer components {
   .h1-title {
-    @apply font-title text-3xl font-bold;
+    @apply font-title text-5xl font-bold;
     /* Adicione outras propriedades se necessário (ex.: cor, margem) */
   }
 }

@@ -24,22 +24,22 @@ export default async function DancasCards({ imagem, name, descricao, href }: Rea
         <Link href={href} id="textoDescricao"
             className="w-full absolute top-0 text-base font-semibold bg-[#1F1F1F] bg-opacity-90 
                 transition-all duration-500 delay-[400ms]  p-1
-                group-hover:translate-y-0 -translate-y-10 font-detail"
+                group-hover:translate-y-0 -translate-y-10 font-detail hover:underline"
         >
             Saiba mais
         </Link>
 
-        <div className="bg-[#141414] p-2 w-full text-2xl font-semibold flex flex-col gap-2 transition-transform duration-500 group-hover:translate-y-0 translate-y-16">
+        <div className="bg-[rgba(139,92,246,0.95)] p-2 w-full text-2xl font-semibold flex flex-col gap-2 transition-transform duration-500 group-hover:translate-y-0 translate-y-16">
 
-            <span className="w-full flex justify-center text-center font-title ">
-                <span className="w-fit shadow-[0_10px_20px_-5px_rgba(139,92,246,0.3)]
+            <span className="w-full flex justify-center text-center font-title shadow-[0_10px_20px_-5px_rgba(139,92,246,0.3)]
                                 group-hover:shadow-lg group-hover:shadow-purpleMain
-                                transition-shadow duration-300 ease-in-out">
+                                transition-shadow duration-300 ease-in-out bg-[rgba(139,92,246,0.3)]">
+                <span className="w-fit ">
                     {name}
                 </span>
             </span>
             <span id="textoDescricao"
-                className="text-sm font-normal bg-[#1F1F1F] bg-opacity-50 transition-all duration-500 delay-100 group-hover:translate-y-0 translate-y-16"
+                className="text-sm font-normal text-start pl-2  bg-opacity-50 transition-all duration-500 delay-100 group-hover:translate-y-0 translate-y-16"
             >
                 {descricao}
             </span>

@@ -4,8 +4,6 @@ import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-
-
 const customIcon = new L.Icon({
     iconUrl: '/images/logos/marcadorMapa.png', // Caminho da sua imagem na pasta public
     className: 'rounded-xl',
@@ -14,9 +12,15 @@ const customIcon = new L.Icon({
     popupAnchor: [0, -32], // Ponto de ancoragem do popup relativo ao ícone
 });
 
-export default function MapaLocalizaçãoSasso()
+
+export default function MapaSasso()
 {
-    return <MapContainer center={[-22.906516362979925, -43.111293683134946]} zoom={13} scrollWheelZoom={false}
+
+    return <MapContainer
+        center={[-22.906516362979925, -43.111293683134946]}
+        zoom={13}
+        scrollWheelZoom={false}
+        key='mapa-sasso'
         className="w-full h-32">
         <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

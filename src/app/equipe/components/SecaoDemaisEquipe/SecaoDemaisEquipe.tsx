@@ -1,7 +1,7 @@
 
 import CardEquipe from "./CardEquipe";
 
-const professores = [
+export const professores = [
     { href: "./", nome: "Diego da Cruz Carvalho Braga", imagem: "/images/dancas/jazz.png" },
     { href: "./", nome: "Carlos Alberto de Moraes Junior", imagem: "/images/dancas/corpoCiente.png" },
     { href: "./", nome: "Isabela da Silva Bernardo", imagem: "/images/dancas/hipHop.png" },
@@ -10,9 +10,14 @@ const professores = [
     { href: "./", nome: "Tereza C P Santos", imagem: "/images/dancas/dancaCriativa.png" },
 ];
 
-const naoProfessores = [
+export const naoProfessores = [
     { href: "./equipe/Leandro-Patricio", nome: "Leandro Fernandes Patrício", imagem: "/images/equipe/Leandro Patricio.png" },
 ];
+
+export const socias = [
+    { href: "./equipe/Maria-Sasso", nome: "Maria Sasso", imagem: "/images/equipe/Maria Sasso.png" },
+    { href: "./equipe/Cristiana-Sasso", nome: "Cristiana Sasso", imagem: "/images/equipe/Cristiana Sasso.png" },
+]
 
 
 
